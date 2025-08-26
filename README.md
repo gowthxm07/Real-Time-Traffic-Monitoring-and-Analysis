@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Real-Time Traffic Monitoring and Analysis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A traffic monitoring system that uses **YOLO with OpenCV** to detect vehicles in real time, stores traffic details in **Firebase**, and provides a **ReactJS dashboard** for visualizing traffic intensity in different areas.
 
-## Available Scripts
+## Features
+- **Vehicle Detection**: Uses YOLO and OpenCV to detect vehicles in real time.
+- **Traffic Data Storage**: Saves detected traffic data (vehicle counts, timestamps, area info) in Firebase.
+- **Interactive Dashboard**: ReactJS web interface displays traffic intensity in specific areas.
+- **Real-Time Updates**: UI fetches live traffic data directly from Firebase.
+- **Scalability**: Can be extended to multiple cameras and locations.
 
-In the project directory, you can run:
+## Technologies Used
+- **Python**: For backend processing
+- **YOLO + OpenCV**: Real-time vehicle detection
+- **Firebase**: For storing and syncing traffic data
+- **ReactJS**: User interface for traffic visualization
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+Ensure you have the following installed:
+- Python 3.7 or higher
+- Node.js and npm
+- Firebase account
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/<your-username>/real-time-traffic-monitoring.git
+    cd real-time-traffic-monitoring
+    ```
+2. Backend Setup (YOLO + OpenCV + Firebase):
+    - Navigate to the backend folder:
+      ```bash
+      cd backend
+      ```
+    - Create and activate a virtual environment:
+      - **On Linux/MacOS:**
+        ```bash
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
+      - **On Windows:**
+        ```bash
+        python -m venv venv
+        .\venv\Scripts\activate.bat
+        ```
+    - Install dependencies:
+      ```bash
+      pip install -r requirements.txt
+      ```
+    - Run the main detection script:
+      ```bash
+      python main.py
+      ```
+      This will start YOLO-based vehicle detection and push traffic data to Firebase.
 
-### `npm test`
+3. Frontend Setup (ReactJS UI):
+    - Navigate to the frontend folder:
+      ```bash
+      cd ../frontend
+      ```
+    - Install dependencies:
+      ```bash
+      npm install
+      ```
+    - Run the React app:
+      ```bash
+      npm start
+      ```
+      The dashboard will run locally on [http://localhost:3000/](http://localhost:3000/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
+1. Start the backend service (`main.py`) to detect vehicles and send data to Firebase.
+   - **Detection Screenshot**
+2. Open the frontend React app at [http://localhost:3000/](http://localhost:3000/).
+   - **Dashboard Screenshot**
+3. View **real-time traffic intensity** updates coming from Firebase in the dashboard.
 
-### `npm run build`
+## Contributing
+Feel free to fork the repository, make improvements, or open an issue if you find any bugs or have suggestions for enhancements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Happy Coding!**
