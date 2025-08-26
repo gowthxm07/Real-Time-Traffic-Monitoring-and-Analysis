@@ -73,7 +73,6 @@ Ensure you have the following installed:
 1. Start the backend service (`main.py`) to detect vehicles and send data to Firebase.
    - **Detection Screenshot**
 2. Open the frontend React app at [http://localhost:3000/](http://localhost:3000/).
-   - **Dashboard Screenshot**
 3. View **real-time traffic intensity** updates coming from Firebase in the dashboard.
 
 ## Contributing
